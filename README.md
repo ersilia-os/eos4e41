@@ -13,7 +13,7 @@ This model contains a reduced version of the model for training purposes. Please
 * Input: `Compound`
 * Input Shape: `Single`
 * Task: `Classification`
-* Output: `['Probability']`
+* Output: `Probability`
 * Output Type: `Float`
 * Output Shape: `Single`
 * Interpretation: Probability that a compound inhibits E.coli growth. The inhibition threshold was set at 80% growth inhibition in the training set.
@@ -26,11 +26,13 @@ This model contains a reduced version of the model for training purposes. Please
 
 ## Citation
 
-If you use this model, please cite the [original authors](https://pubmed.ncbi.nlm.nih.gov/32084340/) of the model and the [Ersilia Model Hub](https://github.com/ersilia-os/ersilia/blob/master/CITATION.cff)
+If you use this model, please cite the [original authors](https://pubmed.ncbi.nlm.nih.gov/32084340/) of the model and the [Ersilia Model Hub](https://github.com/ersilia-os/ersilia/blob/master/CITATION.cff).
 
 ## License
 
-This package is licensed under a GPL-3.0 license. The model contained within this package is licensed under a MIT license. Notice: Ersilia grants access to these models 'as is' provided by the original authors, please refer to the original code repository and/or publication if you use the model in your research.
+This package is licensed under a GPL-3.0 license. The model contained within this package is licensed under a MIT license.
+
+Notice: Ersilia grants access to these models 'as is' provided by the original authors, please refer to the original code repository and/or publication if you use the model in your research.
 
 ## About Us
 
