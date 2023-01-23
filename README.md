@@ -1,31 +1,39 @@
-# Chemprop antibiotic
+# Broad spectrum antibiotic potential
 
-## Model identiifers
-- Slug: chemprop-antibiotic
-- Ersilia ID: eos4e40
-- Tags: E. coli. IC50, antibiotic
+Based on a simple E.coli growth inhibition assay, the authors trained a model capable of identifying antibiotic potential in compounds structurally divergent from conventional antibiotic drugs. One of the predicted active molecules, Halicin (SU3327), was experimentally validated in vitro and in vivo. Halicin is a drug under development as a treatment for diabetes.
+This model contains a reduced version of the model for training purposes. Please use the eos4e40 for the full prediction capabilities.
 
-## Model Description 
-Prediction of the E.coli in vitro growth inhibition potential of small molecules
-- Input: SMILES 
-- Output: IC50 
-- Model type: Regression
-- Mode of training: Pretrained
-- Training data: 2335 compounds (https://github.com/chemprop/chemprop/blob/master/data.tar.gz)
-- Experimentally validated: Yes 
+## Identifiers
 
-## Source Code
-This model has been published by Stokes JM, Yang K, Swanson K, Jin W, Cubillos-Ruiz A, Donghia NM, MacNair CR, French S, Carfrae LA, Bloom-Ackermann Z, Tran VM, Chiappino-Pepe A, Badran AH, Andrews IW, Chory EJ, Church GM, Brown ED, Jaakkola TS, Barzilay R, Collins JJ. A Deep Learning Approach to Antibiotic Discovery. Cell. 2020 Feb 20;180(4):688-702.e13. doi: [10.1016/j.cell.2020.01.021.](https://www.sciencedirect.com/science/article/pii/S0092867420301021) Erratum in: Cell. 2020 Apr 16;181(2):475-483. PMID: 32084340; PMCID: PMC8349178.
+* EOS model ID: `eos4e41`
+* Slug: `chemprop-antibiotic-lite`
 
-* Code: https://github.com/chemprop/chemprop
-* Checkpoints: http://chemprop.csail.mit.edu/checkpoints
+## Characteristics
 
-## License and copyright notice
-The GPL-v3 license applies to all parts of the repository that are not externally maintained libraries. 
-This repository uses the externally maintained library "Chemprop", located at /model and licensed under an [MIT License](https://github.com/ersilia-os/eos4e40/blob/main/model/LICENSE.md)
+* Input: `Compound`
+* Input Shape: `Single`
+* Task: `Classification`
+* Output: `['Probability']`
+* Output Type: `Float`
+* Output Shape: `Single`
+* Interpretation: Probability that a compound inhibits E.coli growth. The inhibition threshold was set at 80% growth inhibition in the training set.
 
-## History
-1. Model was downloaded on 28/04/2021 from [Chemprop](http://chemprop.csail.mit.edu/checkpoints) following the direct link.
-2. We opened an issue on GitHub [#128](https://github.com/chemprop/chemprop/issues/108#issuecomment-802245616) to be sure about feature scaling.
-3. We duplicated `predict.py` and `scripts/save_features.py` scripts from chemprop GitHub repository.
-4. Model was incorporated to Ersilia on 28/04/2021.
+## References
+
+* [Publication](https://pubmed.ncbi.nlm.nih.gov/32084340/)
+* [Source Code](http://chemprop.csail.mit.edu/checkpoints)
+* Ersilia contributor: [GemmaTuron](https://github.com/GemmaTuron)
+
+## Citation
+
+If you use this model, please cite the [original authors](https://pubmed.ncbi.nlm.nih.gov/32084340/) of the model and the [Ersilia Model Hub](https://github.com/ersilia-os/ersilia/blob/master/CITATION.cff)
+
+## License
+
+This package is licensed under a GPL-3.0 license. The model contained within this package is licensed under a MIT license. Notice: Ersilia grants access to these models 'as is' provided by the original authors, please refer to the original code repository and/or publication if you use the model in your research.
+
+## About Us
+
+The [Ersilia Open Source Initiative](https://ersilia.io) is a Non Profit Organization ([1192266](https://register-of-charities.charitycommission.gov.uk/charity-search/-/charity-details/5170657/full-print)) with the mission is to equip labs, universities and clinics in LMIC with AI/ML tools for infectious disease research.
+
+[Help us](https://www.ersilia.io/donate) achieve our mission!
