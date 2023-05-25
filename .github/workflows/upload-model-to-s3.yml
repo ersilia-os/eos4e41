@@ -47,6 +47,7 @@ jobs:
           AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
         run: |
           source activate
+          conda init
           echo "Uploading model to S3 bucket"
           wget https://raw.githubusercontent.com/ersilia-os/ersilia/master/.github/scripts/upload_model_to_s3.py
           python3 upload_model_to_s3.py $REPO_NAME $AWS_ACCESS_KEY $AWS_SECRET_ACCESS_KEY .
