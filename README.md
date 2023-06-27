@@ -24,6 +24,11 @@ This model contains a reduced version of the model for training purposes. Please
 * [Source Code](http://chemprop.csail.mit.edu/checkpoints)
 * Ersilia contributor: [GemmaTuron](https://github.com/GemmaTuron)
 
+## Ersilia model URLs
+* [GitHub](https://github.com/ersilia-os/eos4e41)
+* [AWS S3](https://ersilia-models-zipped.s3.eu-central-1.amazonaws.com/eos4e41.zip)
+* [DockerHub](https://hub.docker.com/r/ersiliaos/eos4e41) (AMD64, ARM64)
+
 ## Citation
 
 If you use this model, please cite the [original authors](https://pubmed.ncbi.nlm.nih.gov/32084340/) of the model and the [Ersilia Model Hub](https://github.com/ersilia-os/ersilia/blob/master/CITATION.cff).
